@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/favicon.png" />
+    
+
+    <title>
+        
+          Java语法基础 - XQ blog
+        
+    </title>
+
+    <!-- Spectre.css framework -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- theme css & js -->
+    
+<link rel="stylesheet" href="/css/book.css">
+
+    
+<script src="/js/book.js"></script>
+
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    zooming.listen('.book-content img')
+})
+</script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+
+<div class="book-container">
+  <div class="book-sidebar">
+    <div class="book-brand">
+  <a href="/">
+    <img src="/favicon.png">
+    <span>XQ BLOG</span>
+  </a>
+</div>
+    <div class="book-menu">
+  <h1 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h1><h2 id="JavaSE"><a href="#JavaSE" class="headerlink" title="JavaSE"></a>JavaSE</h2><ul>
+<li><a href="/2020/07/29/Java语法基础/index.html">Java语法基础</a></li>
+</ul>
+
+</div>
+
+
+<script src="/js/book-menu.js"></script>
+
+  </div>
+
+  <div class="sidebar-toggle" onclick="sidebar_toggle()" onmouseover="add_inner()" onmouseleave="remove_inner()">
+  <div class="sidebar-toggle-inner"></div>
+</div>
+
+<script>
+function add_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.add('show')  
+}
+
+function remove_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.remove('show')
+}
+
+function sidebar_toggle() {
+    let sidebar_toggle = document.querySelector('.sidebar-toggle')
+    let sidebar = document.querySelector('.book-sidebar')
+    let content = document.querySelector('.off-canvas-content')
+    if (sidebar_toggle.classList.contains('extend')) { // show
+        sidebar_toggle.classList.remove('extend')
+        sidebar.classList.remove('hide')
+        content.classList.remove('extend')
+    }
+    else { // hide
+        sidebar_toggle.classList.add('extend')
+        sidebar.classList.add('hide')
+        content.classList.add('extend')
+    }
+}
+</script>
+
+  <div class="off-canvas-content">
+    <div class="columns">
+      <div class="column col-10 col-lg-12">
+        <div class="book-navbar">
+          <!-- For Responsive Layout -->
+
+<header class="navbar">
+  <section class="navbar-section">
+    <a onclick="open_sidebar()">
+      <i class="icon icon-menu"></i>
+    </a>
+  </section>
+</header>
+
+        </div>
+        <div class="book-content">
+          <div class="book-post">
+  <h1 id="JAVA语言基础与概论"><a href="#JAVA语言基础与概论" class="headerlink" title="JAVA语言基础与概论"></a>JAVA语言基础与概论</h1><h2 id="计算机语言"><a href="#计算机语言" class="headerlink" title="计算机语言"></a>计算机语言</h2><p>就是人与计算机之间交互</p>
+<h2 id="Java的开发环境"><a href="#Java的开发环境" class="headerlink" title="Java的开发环境"></a>Java的开发环境</h2><p>JVM：执行class(字节码)文件</p>
+<p>JRE：Java的运行环境</p>
+<p>JDK：Java程序的开发工具</p>
+<p>JDK包括JRE</p>
+<p>JRE包括JVM</p>
+<h2 id="Java的环境配置"><a href="#Java的环境配置" class="headerlink" title="Java的环境配置"></a>Java的环境配置</h2><p>计算机-&gt;右键-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;用户变量-&gt;新建-&gt;Path-&gt;添加jdk安装的bin路径</p>
+<h2 id="为什么配置环境"><a href="#为什么配置环境" class="headerlink" title="为什么配置环境"></a>为什么配置环境</h2><p>因为更加方便的使用开发者工具</p>
+<h2 id="第一个Java程序"><a href="#第一个Java程序" class="headerlink" title="第一个Java程序"></a>第一个Java程序</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Hello World!"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="代码存在问题"><a href="#代码存在问题" class="headerlink" title="代码存在问题:"></a>代码存在问题:</h2><p>编译时报错：代码语法问题，实际开发中经可能在编译时解决</p>
+<p>运行时报错：程序的逻辑问题</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法:"></a>语法:</h2><p>1、Java语法严格区分大小写</p>
+<p>2、一个源文件里可以有多个类，一个源文件只有一个public类。public类的名称必须与源文件名相同</p>
+<p>3、一个类若要运行，则必须拥有一个main方法</p>
+<h2 id="一个类为什么需要一个main方法？"><a href="#一个类为什么需要一个main方法？" class="headerlink" title="一个类为什么需要一个main方法？"></a>一个类为什么需要一个main方法？</h2><p>需要一个入口来控制代码的执行顺序</p>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单行注释</span></span><br><span class="line"><span class="comment">/* 多行注释 */</span></span><br><span class="line"><span class="comment">/** 文档注释 */</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注：注释不能嵌套</strong></p>
+<h2 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">;	<span class="comment">//语句结束</span></span><br><span class="line">&#123;&#125;	<span class="comment">//代码块</span></span><br><span class="line">[]	<span class="comment">//数组</span></span><br><span class="line">()	<span class="comment">//括号 优先</span></span><br><span class="line">.	<span class="comment">//访问类中方法使用</span></span><br><span class="line"> 	<span class="comment">//空格 分割</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="标识符命名规范"><a href="#标识符命名规范" class="headerlink" title="标识符命名规范"></a>标识符命名规范</h2><p>1、由字母、数字、下划线、美元符组成，不能数字开头</p>
+<p>2、驼峰命名</p>
+<p>3、不能使用关键字和保留字</p>
+<p>4、不能使用内置类名</p>
+<h2 id="EditPlus工具的使用"><a href="#EditPlus工具的使用" class="headerlink" title="EditPlus工具的使用"></a>EditPlus工具的使用</h2><p>1、设置不生成备份文件</p>
+<p>​        工具-&gt;参数设置-&gt;文件-&gt;取消保存时创建备份文件的勾</p>
+<p><img src="./Snipaste_2020-07-29_03-16-51.png" alt="Snipaste_2020-07-29_03-16-51"></p>
+<p>2、配置编译与运行的工具</p>
+<p>工具-&gt;配置用户工具-&gt;用户工具-&gt;添加工具</p>
+<p>工具1:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">菜单文字:编译java</span><br><span class="line">命令:javac</span><br><span class="line">参数:-d classes $(FileName)</span><br><span class="line">初始目录:$(FileDir)</span><br></pre></td></tr></table></figure>
+
+<p><img src="./Snipaste_2020-07-29_03-21-30.png" alt="Snipaste_2020-07-29_03-21-30"></p>
+<p>工具2:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">菜单文字:运行java</span><br><span class="line">命令:java</span><br><span class="line">参数:-classpath classes $(FileNameNoExt)</span><br><span class="line">初始目录:$(FileDir)</span><br></pre></td></tr></table></figure>
+
+<p><img src="./Snipaste_2020-07-29_03-21-37.png" alt="Snipaste_2020-07-29_03-21-37"></p>
+<p>使用ctrl+1编译代码</p>
+<p>使用ctrl+2运行代码</p>
+<h2 id="数据类型范围"><a href="#数据类型范围" class="headerlink" title="数据类型范围"></a>数据类型范围</h2><table>
+<thead>
+<tr>
+<th align="center">数据类型</th>
+<th align="center">占位</th>
+<th align="center">范围</th>
+<th align="center">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">byte</td>
+<td align="center">1</td>
+<td align="center">[-128，127]</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">short</td>
+<td align="center">2</td>
+<td align="center">[-2^15，2^15-1]</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center">4</td>
+<td align="center">[-2^31，2^31-1]</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">long</td>
+<td align="center">8</td>
+<td align="center">[-2^63，2^63-1]</td>
+<td align="center">0L</td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center">2</td>
+<td align="center">[0，2^16-1]</td>
+<td align="center">‘\u0000’</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">4</td>
+<td align="center">[-3.4E38(-3.4×10^38)，3.4E38(-1.7×10^30)]</td>
+<td align="center">0.0F</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">8</td>
+<td align="center">[-1.7E308(-3.4×10^308)，1.7E308(-3.4×10^308)]</td>
+<td align="center">0.0D</td>
+</tr>
+<tr>
+<td align="center">boolean</td>
+<td align="center">1位</td>
+<td align="center">false、true</td>
+<td align="center">false</td>
+</tr>
+</tbody></table>
+<h2 id="使用java编写不同的数据类型"><a href="#使用java编写不同的数据类型" class="headerlink" title="使用java编写不同的数据类型"></a>使用java编写不同的数据类型</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TypeDemo</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		<span class="comment">//byte</span></span><br><span class="line">		System.out.println(<span class="number">10</span>);</span><br><span class="line">		<span class="comment">//short</span></span><br><span class="line">		System.out.println(<span class="number">10</span>);</span><br><span class="line">		<span class="comment">//int</span></span><br><span class="line">		System.out.println(<span class="number">10</span>);</span><br><span class="line">		System.out.println(<span class="number">0B1010</span>);		<span class="comment">//二进制</span></span><br><span class="line">		System.out.println(<span class="number">012</span>);		<span class="comment">//八进制</span></span><br><span class="line">		System.out.println(<span class="number">0x000A</span>);		<span class="comment">//十六进制</span></span><br><span class="line">		<span class="comment">//long</span></span><br><span class="line">		System.out.println(<span class="number">10L</span>);</span><br><span class="line">		<span class="comment">//float</span></span><br><span class="line">		System.out.println(<span class="number">10F</span>);	</span><br><span class="line">		<span class="comment">//double</span></span><br><span class="line">		System.out.println(<span class="number">10</span>D);</span><br><span class="line">		<span class="comment">//char</span></span><br><span class="line">		System.out.println(<span class="string">'A'</span>);</span><br><span class="line">		<span class="comment">//String</span></span><br><span class="line">		System.out.println(<span class="string">"abc"</span>);</span><br><span class="line">		<span class="comment">//boolean</span></span><br><span class="line">		System.out.println(<span class="keyword">true</span>);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+
+
+  </div>
+
+
+
+<script src="/js/book-post.js"></script>
+
+        </div>
+      </div>
+      <div class="column col-2 hide-lg">
+        <div class="book-post-info">
+  
+    <div class="book-post-meta">
+
+  <div class="author">
+
+    <!-- Author image -->
+    <div class="author-img">
+      
+        <figure
+          class="avatar avatar-lg"
+          data-initial="X"
+          style="background-color: #3b4351;">
+        </figure>
+      
+    </div>
+
+    <!-- Author title -->
+    <div class="author-title">
+      <div>XQ</div>
+      <div>2020-07-29</div>
+    </div>
+  </div>
+
+  
+    <div class="divider"></div>
+
+    <div class="link">
+      
+
+      <a class="tag-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">#Java基础</a>
+    </div>
+    
+  
+
+  <div class="divider"></div>
+</div>
+  
+
+  <div class="book-tocbot">
+</div>
+<div class="book-tocbot-menu">
+  <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+  <a onclick="go_top()">Back to top</a>
+  <a onclick="go_bottom()">Go to bottom</a>
+</div>
+
+
+<script src="/js/book-toc.js"></script>
+
+</div>
+      </div>
+    </div>
+  </div>
+  
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+</div>
+
+</body>
+</html>
+
+
+<script src="/js/book.js"></script>
