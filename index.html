@@ -91,7 +91,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="Mybatis分页插件手写count查询"><a href="#Mybatis分页插件手写count查询" class="headerlink" title="Mybatis分页插件手写count查询"></a>Mybatis分页插件手写count查询</h1><p>注，手写需要mybatis版本的支持，必须再&gt;&#x3D;<code>5.0.4</code>版本才可以</p>
+        <p>注，手写需要mybatis版本的支持，必须再&gt;&#x3D;<code>5.0.4</code>版本才可以</p>
 <p>对应官网的文献地址：<a target="_blank" rel="noopener" href="https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/Changelog.md">https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/Changelog.md</a></p>
 <p>在mapper中增加对应的分页方法，<code>分页方法名字+_COUNT </code>，返回值为<code>Long</code>类型，然后在对应的<code>xml</code>文件中生成对应的方法，然后写对应的查询方法，通常是重新首先都是为了剔除没必要的关联查询，提高其查询的速度</p>
 <p>mapper.java改造</p>
@@ -103,7 +103,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/11/12/Mybatis%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6%E6%89%8B%E5%86%99count%E6%9F%A5%E8%AF%A2/" data-id="cm3ehwerb00045ovcgmyc778v" data-title="Mybatis分页插件手写count查询" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/11/12/Mybatis%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6%E6%89%8B%E5%86%99count%E6%9F%A5%E8%AF%A2/" data-id="cm3ein08f0003icvc4givhtj8" data-title="Mybatis分页插件手写count查询" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -156,7 +156,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/11/12/hello-world/" data-id="cm3ehwera00035ovc6ng7gwhm" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/11/12/hello-world/" data-id="cm3ein08g0004icvc0y15c8gi" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -190,7 +190,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="IDEA内存不足处理方案"><a href="#IDEA内存不足处理方案" class="headerlink" title="IDEA内存不足处理方案"></a>IDEA内存不足处理方案</h1><p>idea设置的low memory内存不足报错</p>
+        <p>idea设置的low memory内存不足报错</p>
 <h2 id="IDEA展示vm大小显示"><a href="#IDEA展示vm大小显示" class="headerlink" title="IDEA展示vm大小显示"></a>IDEA展示vm大小显示</h2><img src="/2024/11/11/IDEA%E8%AE%BE%E7%BD%AEVM%E5%86%85%E5%AD%98%E5%A4%A7%E5%B0%8F/image-20241111174706532.png" class="" alt="image-20241111174706532">
 
 <h2 id="IDEA设置vm大小"><a href="#IDEA设置vm大小" class="headerlink" title="IDEA设置vm大小"></a>IDEA设置vm大小</h2><p><code>win+R</code>输入cmd</p>
@@ -206,7 +206,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/11/11/IDEA%E8%AE%BE%E7%BD%AEVM%E5%86%85%E5%AD%98%E5%A4%A7%E5%B0%8F/" data-id="cm3ehwer000005ovc8hube8qf" data-title="IDEA设置VM内存大小" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/11/11/IDEA%E8%AE%BE%E7%BD%AEVM%E5%86%85%E5%AD%98%E5%A4%A7%E5%B0%8F/" data-id="cm3ein0800000icvc6kv59gca" data-title="IDEA设置VM内存大小" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -242,12 +242,47 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>RabbitMQ是一个开源的遵循AMQP协议实现的基于Erlang语言编写，即需要先安装部署Erlang环境再安装RabbitMQ环境。</p>
-<img src="/2024/11/01/Linux%E5%AE%89%E8%A3%85rabbitMQ/image-20241111143948675.png" class="" alt="image-20241111143948675">
+        <p><strong>本教程用的是centos7系统</strong></p>
+<p>RabbitMQ是一个开源的遵循AMQP协议实现的基于Erlang语言编写，即需要先安装部署Erlang环境再安装RabbitMQ环境。</p>
+<h2 id="安装Erlang"><a href="#安装Erlang" class="headerlink" title="安装Erlang"></a>安装Erlang</h2><p>官网：<a target="_blank" rel="noopener" href="https://packagecloud.io/rabbitmq/rabbitmq-server">https://packagecloud.io/rabbitmq/rabbitmq-server</a></p>
+<p>下载脚本：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --content-disposition https://packagecloud.io/rabbitmq/erlang/packages/el/7/erlang-22.3.4.12-1.el7.x86_64.rpm/download.rpm</span><br></pre></td></tr></table></figure>
+
+<p>本地安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum localinstall erlang-22.3.4.12-1.el7.x86_64.rpm</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装RabbitMQ"><a href="#安装RabbitMQ" class="headerlink" title="安装RabbitMQ"></a>安装RabbitMQ</h2><p>下载脚本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --content-disposition https://packagecloud.io/rabbitmq/rabbitmq-server/packages/el/7/rabbitmq-server-3.8.13-1.el7.noarch.rpm/download.rpm</span><br></pre></td></tr></table></figure>
+
+<p>运行下面的命令来将 Key 导入，执行命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm --import https://www.rabbitmq.com/rabbitmq-release-signing-key.asc</span><br></pre></td></tr></table></figure>
+
+<p><strong>注：此处有可能下载失败，因为这个是外网你可以连接vpn去下载丢到服务器上执行，此处脚本可以改成</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm --import rabbitmq-release-signing-key.asc</span><br></pre></td></tr></table></figure>
+
+<p>本地安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum localinstall rabbitmq-server-3.8.13-1.el7.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>启动mq</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start rabbitmq-server</span><br></pre></td></tr></table></figure>
+
+<p>设置开机自启</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable rabbitmq-server</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装RabbitMQ界面管理"><a href="#安装RabbitMQ界面管理" class="headerlink" title="安装RabbitMQ界面管理"></a>安装RabbitMQ界面管理</h2><p>安装脚本：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins enable rabbitmq_management</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Enabling plugins on node rabbit@VM-8-17-centos:</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">rabbitmq_management</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">The following plugins have been configured:</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">  rabbitmq_management</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">  rabbitmq_management_agent</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">  rabbitmq_web_dispatch</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Applying plugin configuration to rabbit@VM-8-17-centos...</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">The following plugins have been enabled:</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">  rabbitmq_management</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">  rabbitmq_management_agent</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">  rabbitmq_web_dispatch</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># set 3 plugins.</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Offline change; changes will take effect at broker restart.</span></span><br></pre></td></tr></table></figure>
+
+<p>此界面管理需要重启rabbitmq</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart rabbitmq-server</span><br></pre></td></tr></table></figure>
+
+<h2 id="日常使用"><a href="#日常使用" class="headerlink" title="日常使用"></a>日常使用</h2><p>需要开通<code>1567端口</code>和<code>15672端口</code>才可以进行使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">状态</span></span><br><span class="line">systemctl status rabbitmq-server</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">启动</span></span><br><span class="line">systemctl start rabbitmq-server</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">停止</span></span><br><span class="line">systemctl stop rabbitmq-server</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">重启</span></span><br><span class="line">systemctl restart rabbitmq-server</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">设置用户分配权限</span></span><br><span class="line">rabbitmqctl set_user_tags admin administrator</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">设置vhost的用户权限</span></span><br><span class="line">rabbitmqctl set_permissions -p / admin &quot;.*&quot; &quot;.*&quot; &quot;.*&quot; </span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/11/01/Linux%E5%AE%89%E8%A3%85rabbitMQ/" data-id="cm3ehwer600015ovchh0zb4xj" data-title="Linux安装rabbitMQ" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/11/01/Linux%E5%AE%89%E8%A3%85rabbitMQ/" data-id="cm3ein0870001icvc8xwt2x94" data-title="Linux安装rabbitMQ" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
