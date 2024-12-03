@@ -19,22 +19,22 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="idea设置的low memory内存不足报错 IDEA展示vm大小显示  IDEA设置vm大小win+R输入cmd 1234567SET VM_OPTIONS_FILE&#x3D;SET USER_VM_OPTIONS_FILE&#x3D;IF NOT &quot;%IDEA_VM_OPTIONS%&quot; &#x3D;&#x3D; &quot;&quot; (  :: 1. %&lt;IDE_NAME&gt;_VM_OPTION">
+    <meta name="description" content="批量操作的时候可以在mysql数据库连接池添加allowMultiQueries&#x3D;true 1url: jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;test_db?allowMultiQueries&#x3D;true  即可使用批量操作(新增同理) 1234567&lt;update id&#x3D;&quot;batchUpdate&quot;&gt;    &lt;foreach collectio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IDEA设置VM内存大小">
-<meta property="og:url" content="http://example.com/2024/11/11/IDEA%E8%AE%BE%E7%BD%AEVM%E5%86%85%E5%AD%98%E5%A4%A7%E5%B0%8F/index.html">
+<meta property="og:title" content="Mybatis批量新增和修改">
+<meta property="og:url" content="http://example.com/2024/11/14/Mybatis%E6%89%B9%E9%87%8F%E6%96%B0%E5%A2%9E%E5%92%8C%E4%BF%AE%E6%94%B9/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="idea设置的low memory内存不足报错 IDEA展示vm大小显示  IDEA设置vm大小win+R输入cmd 1234567SET VM_OPTIONS_FILE&#x3D;SET USER_VM_OPTIONS_FILE&#x3D;IF NOT &quot;%IDEA_VM_OPTIONS%&quot; &#x3D;&#x3D; &quot;&quot; (  :: 1. %&lt;IDE_NAME&gt;_VM_OPTION">
+<meta property="og:description" content="批量操作的时候可以在mysql数据库连接池添加allowMultiQueries&#x3D;true 1url: jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;test_db?allowMultiQueries&#x3D;true  即可使用批量操作(新增同理) 1234567&lt;update id&#x3D;&quot;batchUpdate&quot;&gt;    &lt;foreach collectio">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-11T09:32:53.000Z">
-<meta property="article:modified_time" content="2024-11-12T13:36:38.705Z">
+<meta property="article:published_time" content="2024-11-13T16:09:51.000Z">
+<meta property="article:modified_time" content="2024-11-14T16:35:33.707Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="IDEA">
+<meta property="article:tag" content="Mybatis">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>IDEA设置VM内存大小 - Hexo</title>
+  <title>Mybatis批量新增和修改 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="IDEA设置VM内存大小"></span>
+            <span id="subtitle" data-typed-text="Mybatis批量新增和修改"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-11-11 17:32" pubdate>
-          2024年11月11日 下午
+        <time datetime="2024-11-14 00:09" pubdate>
+          2024年11月14日 凌晨
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          66 字
+          85 字
         
       </span>
     
@@ -272,23 +272,16 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">IDEA设置VM内存大小</h1>
+            <h1 id="seo-header">Mybatis批量新增和修改</h1>
             
             
               <div class="markdown-body">
                 
-                <p>idea设置的low memory内存不足报错</p>
-<h2 id="IDEA展示vm大小显示"><a href="#IDEA展示vm大小显示" class="headerlink" title="IDEA展示vm大小显示"></a>IDEA展示vm大小显示</h2>
+                <p>批量操作的时候可以在mysql数据库连接池添加<code>allowMultiQueries=true</code></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">url:</span> <span class="hljs-string">jdbc:mysql://localhost:3306/test_db?allowMultiQueries=true</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="IDEA设置vm大小"><a href="#IDEA设置vm大小" class="headerlink" title="IDEA设置vm大小"></a>IDEA设置vm大小</h2><p><code>win+R</code>输入cmd</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs shell">SET VM_OPTIONS_FILE=<br>SET USER_VM_OPTIONS_FILE=<br>IF NOT &quot;%IDEA_VM_OPTIONS%&quot; == &quot;&quot; (<br>  :: 1. %&lt;IDE_NAME&gt;_VM_OPTIONS%<br>  echo &quot;%IDEA_VM_OPTIONS%&quot;<br>  IF EXIST &quot;%IDEA_VM_OPTIONS%&quot; SET &quot;VM_OPTIONS_FILE=%IDEA_VM_OPTIONS%&quot;<br>)<br></code></pre></td></tr></table></figure>
-
-<p>idea的配置文件</p>
-
-
-<p>将文件中的<code>Xms</code>和<code>Xmx</code>进行修改</p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs diff"><span class="hljs-deletion">-Xms4096m</span><br><span class="hljs-deletion">-Xmx8192m</span><br></code></pre></td></tr></table></figure>
-
+<p>即可使用批量操作(新增同理)</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">update</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;batchUpdate&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">foreach</span> <span class="hljs-attr">collection</span>=<span class="hljs-string">&quot;list&quot;</span> <span class="hljs-attr">item</span>=<span class="hljs-string">&quot;item&quot;</span> <span class="hljs-attr">index</span>=<span class="hljs-string">&quot;index&quot;</span> <span class="hljs-attr">open</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">close</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">separator</span>=<span class="hljs-string">&quot;;&quot;</span>&gt;</span><br>        UPDATE user_t<br>        SET user_name = #&#123;item.userName&#125;<br>        WHERE id= #&#123;item.id&#125;<br>    <span class="hljs-tag">&lt;/<span class="hljs-name">foreach</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">update</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -301,7 +294,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/IDEA/" class="print-no-link">#IDEA</a>
+        <a href="/tags/Mybatis/" class="print-no-link">#Mybatis</a>
       
     </div>
   
@@ -313,8 +306,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>IDEA设置VM内存大小</div>
-      <div>http://example.com/2024/11/11/IDEA设置VM内存大小/</div>
+      <div>Mybatis批量新增和修改</div>
+      <div>http://example.com/2024/11/14/Mybatis批量新增和修改/</div>
     </div>
     <div class="license-meta">
       
@@ -326,7 +319,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年11月11日</div>
+          <div>2024年11月14日</div>
         </div>
       
       
@@ -358,9 +351,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/11/12/hello-world/" title="Hello World">
+                      <a href="/2024/11/14/Mybatis-Plus/" title="Mybatis Plus">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hello World</span>
+                        <span class="hidden-mobile">Mybatis Plus</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -368,8 +361,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/11/01/Linux%E5%AE%89%E8%A3%85rabbitMQ/" title="Linux安装rabbitMQ">
-                        <span class="hidden-mobile">Linux安装rabbitMQ</span>
+                      <a href="/2024/11/13/Linux%E7%89%88Nginx%E9%85%8D%E7%BD%AEhttps/" title="Linux版Nginx配置https">
+                        <span class="hidden-mobile">Linux版Nginx配置https</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

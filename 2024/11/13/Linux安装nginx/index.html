@@ -19,22 +19,22 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="idea设置的low memory内存不足报错 IDEA展示vm大小显示  IDEA设置vm大小win+R输入cmd 1234567SET VM_OPTIONS_FILE&#x3D;SET USER_VM_OPTIONS_FILE&#x3D;IF NOT &quot;%IDEA_VM_OPTIONS%&quot; &#x3D;&#x3D; &quot;&quot; (  :: 1. %&lt;IDE_NAME&gt;_VM_OPTION">
+    <meta name="description" content="安装nginx依赖1yum -y install gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel  安装wget1yum -y install wget  创建nginx安装目录1mkdir &#x2F;usr&#x2F;local&#x2F;nginx  下载nginx1wget https:&#x2F;&#x2F;nginx.org&#x2F;download&#x2F;ngin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IDEA设置VM内存大小">
-<meta property="og:url" content="http://example.com/2024/11/11/IDEA%E8%AE%BE%E7%BD%AEVM%E5%86%85%E5%AD%98%E5%A4%A7%E5%B0%8F/index.html">
+<meta property="og:title" content="Linux安装nginx">
+<meta property="og:url" content="http://example.com/2024/11/13/Linux%E5%AE%89%E8%A3%85nginx/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="idea设置的low memory内存不足报错 IDEA展示vm大小显示  IDEA设置vm大小win+R输入cmd 1234567SET VM_OPTIONS_FILE&#x3D;SET USER_VM_OPTIONS_FILE&#x3D;IF NOT &quot;%IDEA_VM_OPTIONS%&quot; &#x3D;&#x3D; &quot;&quot; (  :: 1. %&lt;IDE_NAME&gt;_VM_OPTION">
+<meta property="og:description" content="安装nginx依赖1yum -y install gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel  安装wget1yum -y install wget  创建nginx安装目录1mkdir &#x2F;usr&#x2F;local&#x2F;nginx  下载nginx1wget https:&#x2F;&#x2F;nginx.org&#x2F;download&#x2F;ngin">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-11T09:32:53.000Z">
-<meta property="article:modified_time" content="2024-11-12T13:36:38.705Z">
+<meta property="article:published_time" content="2024-11-13T12:27:12.000Z">
+<meta property="article:modified_time" content="2024-11-14T16:35:33.697Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="IDEA">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>IDEA设置VM内存大小 - Hexo</title>
+  <title>Linux安装nginx - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="IDEA设置VM内存大小"></span>
+            <span id="subtitle" data-typed-text="Linux安装nginx"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-11-11 17:32" pubdate>
-          2024年11月11日 下午
+        <time datetime="2024-11-13 20:27" pubdate>
+          2024年11月13日 晚上
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          66 字
+          242 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -272,22 +272,32 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">IDEA设置VM内存大小</h1>
+            <h1 id="seo-header">Linux安装nginx</h1>
             
             
               <div class="markdown-body">
                 
-                <p>idea设置的low memory内存不足报错</p>
-<h2 id="IDEA展示vm大小显示"><a href="#IDEA展示vm大小显示" class="headerlink" title="IDEA展示vm大小显示"></a>IDEA展示vm大小显示</h2>
+                <h2 id="安装nginx依赖"><a href="#安装nginx依赖" class="headerlink" title="安装nginx依赖"></a>安装nginx依赖</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum -y install gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel<br></code></pre></td></tr></table></figure>
 
-<h2 id="IDEA设置vm大小"><a href="#IDEA设置vm大小" class="headerlink" title="IDEA设置vm大小"></a>IDEA设置vm大小</h2><p><code>win+R</code>输入cmd</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs shell">SET VM_OPTIONS_FILE=<br>SET USER_VM_OPTIONS_FILE=<br>IF NOT &quot;%IDEA_VM_OPTIONS%&quot; == &quot;&quot; (<br>  :: 1. %&lt;IDE_NAME&gt;_VM_OPTIONS%<br>  echo &quot;%IDEA_VM_OPTIONS%&quot;<br>  IF EXIST &quot;%IDEA_VM_OPTIONS%&quot; SET &quot;VM_OPTIONS_FILE=%IDEA_VM_OPTIONS%&quot;<br>)<br></code></pre></td></tr></table></figure>
+<h2 id="安装wget"><a href="#安装wget" class="headerlink" title="安装wget"></a>安装wget</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum -y install wget<br></code></pre></td></tr></table></figure>
 
-<p>idea的配置文件</p>
+<h2 id="创建nginx安装目录"><a href="#创建nginx安装目录" class="headerlink" title="创建nginx安装目录"></a>创建nginx安装目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mkdir /usr/local/nginx<br></code></pre></td></tr></table></figure>
 
+<h2 id="下载nginx"><a href="#下载nginx" class="headerlink" title="下载nginx"></a>下载nginx</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">wget https://nginx.org/download/nginx-1.8.0.tar.gz<br></code></pre></td></tr></table></figure>
 
-<p>将文件中的<code>Xms</code>和<code>Xmx</code>进行修改</p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs diff"><span class="hljs-deletion">-Xms4096m</span><br><span class="hljs-deletion">-Xmx8192m</span><br></code></pre></td></tr></table></figure>
+<h2 id="解压nginx压缩包"><a href="#解压nginx压缩包" class="headerlink" title="解压nginx压缩包"></a>解压nginx压缩包</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">tar -xvf nginx-1.8.0.tar.gz<br></code></pre></td></tr></table></figure>
+
+<h2 id="进入nginx目录进行配置"><a href="#进入nginx目录进行配置" class="headerlink" title="进入nginx目录进行配置"></a>进入nginx目录进行配置</h2><p>配置nginx(考虑到后续安装SSL证书，添加两个模块)</p>
+<p><strong>–with-http_stub_status_module</strong>：用来监控 Nginx 的当前状态 <strong>–with-http_ssl_module</strong>：使用https协议模块。默认情况下，该模块没有被构建。前提是openssl与openssl-devel已安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">./configure --with-http_stub_status_module --with-http_ssl_module<br></code></pre></td></tr></table></figure>
+
+<h2 id="编译与安装"><a href="#编译与安装" class="headerlink" title="编译与安装"></a>编译与安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">编译</span><br>make<br><span class="hljs-meta prompt_"># </span><span class="language-bash">安装</span><br>make install<br></code></pre></td></tr></table></figure>
+
+<h2 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">查找nginx安装目录</span><br>whereis nginx<br><span class="hljs-meta prompt_"># </span><span class="language-bash">切换到对应的目录</span><br>cd /usr/local/nginx/sbin/<br><span class="hljs-meta prompt_"># </span><span class="language-bash">启动nginx</span><br>./nginx<br><span class="hljs-meta prompt_"># </span><span class="language-bash">验证nginx是否启动成功 方法一</span><br>curl http://localhost:80<br><span class="hljs-meta prompt_"># </span><span class="language-bash">验证nginx是否启动成功 方法二</span><br>ps -ef | grep nginx<br></code></pre></td></tr></table></figure>
+
+<h2 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">关闭防火墙</span><br>systemctl stop firewalld<br><span class="hljs-meta prompt_"># </span><span class="language-bash">注：如果是服务器的话对安全组进行修改就可以了</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">启动</span><br>./nginx<br><span class="hljs-meta prompt_"># </span><span class="language-bash">关闭</span><br>./nginx -s stop<br><span class="hljs-meta prompt_"># </span><span class="language-bash">重启</span><br>./nginx -s reopen<br><span class="hljs-meta prompt_"># </span><span class="language-bash">重新加载配置文件</span><br>./nginx -s reload<br></code></pre></td></tr></table></figure>
 
 
                 
@@ -301,7 +311,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/IDEA/" class="print-no-link">#IDEA</a>
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
       
     </div>
   
@@ -313,8 +323,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>IDEA设置VM内存大小</div>
-      <div>http://example.com/2024/11/11/IDEA设置VM内存大小/</div>
+      <div>Linux安装nginx</div>
+      <div>http://example.com/2024/11/13/Linux安装nginx/</div>
     </div>
     <div class="license-meta">
       
@@ -326,7 +336,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年11月11日</div>
+          <div>2024年11月13日</div>
         </div>
       
       
@@ -358,9 +368,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/11/12/hello-world/" title="Hello World">
+                      <a href="/2024/11/13/Linux%E7%89%88Nginx%E9%85%8D%E7%BD%AEhttps/" title="Linux版Nginx配置https">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hello World</span>
+                        <span class="hidden-mobile">Linux版Nginx配置https</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -368,8 +378,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/11/01/Linux%E5%AE%89%E8%A3%85rabbitMQ/" title="Linux安装rabbitMQ">
-                        <span class="hidden-mobile">Linux安装rabbitMQ</span>
+                      <a href="/2024/11/13/window%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/" title="window端口占用">
+                        <span class="hidden-mobile">window端口占用</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
